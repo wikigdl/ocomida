@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>address:</b>
+  <%= @restaurant_map.address %>
+</p>
+
+
+<p>
+  <b>Gmaps:</b>
+  <%= @restaurant_map.gmaps %>
+</p>
+
+
+<%= link_to 'Edit', edit_restaurant_map_path(@restaurant_map) %> |
+<%= link_to 'Back', restaurant_maps_path %>

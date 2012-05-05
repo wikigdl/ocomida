@@ -1,0 +1,19 @@
+<% @restaurant_restaurants.each do |restaurant_restaurant| %>
+    <h2><%= restaurant_restaurant.name %></h2>
+    <% @restaurant_dishes.each do |restaurant_dish| %>
+        
+    <% if restaurant_dish.restaurant_admin_id == restaurant_restaurant.restaurant_admin_id %>
+
+              <%= image_tag(restaurant_dish.image, class: 'dish') %>
+            <br />
+
+             <h3><%= restaurant_dish.name %></h3>
+            <p></p><%= truncate(strip_tags(restaurant_dish.description),length: 80) %>   </p>
+
+         <td>Precio: <b><%= restaurant_dish.price %></b></td>
+            <br /><br />
+        </tr>
+
+        <% end %>
+    <% end %>
+<% end %>

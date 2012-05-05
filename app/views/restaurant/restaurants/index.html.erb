@@ -1,0 +1,29 @@
+<h1> restaurant name</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+   <%@has_one = nil%>
+<% @restaurant_restaurants.each do |restaurant_restaurant| %>
+     <% if restaurant_restaurant.restaurant_admin_id == current_admin.id %>
+          <tr>
+            <td><%= restaurant_restaurant.name %></td>
+            <td><%= restaurant_restaurant.address %></td>
+            <td><%= link_to 'Show', restaurant_restaurant %></td>
+            <td><%= link_to 'Edit', edit_restaurant_restaurant_path(restaurant_restaurant) %></td>
+            <td><%= link_to 'Destroy', restaurant_restaurant, confirm: 'Are you sure?', method: :delete %></td>
+          </tr>
+      <%@has_one = 1 %>
+<% end %>
+<% end %>
+</table>
+
+<br />
+<% if @has_one.nil? %>
+<%= link_to 'New Restaurant', new_restaurant_restaurant_path %>
+  <%end%>

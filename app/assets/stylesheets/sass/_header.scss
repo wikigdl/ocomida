@@ -1,0 +1,52 @@
+#barra{
+position:absolute;
+z-index:-1;
+width:100%; 
+height:52px;
+background-image:url(image_path('barra.jpg'));
+background-repeat:repeat-x;
+}
+
+#header{
+margin:$margen_centrado;
+width:$full_width;
+img{
+margin-top:8px;}
+}
+
+#menu{
+	width:500px;
+	height:52px;
+	margin:$margen_centrado;
+	float:right;
+	
+		ul{
+		list-style-type:none;
+		height:42px;
+		display:block;
+			li{
+			width:auto;
+			height:32px;
+			float:left;
+				a{
+				display:block;  
+				float:left;  
+    			width:auto;
+				height:22px;
+				padding-top:3px;
+				text-transform:uppercase;
+				text-decoration:none;
+				text-align:center;
+				margin-left:30px;
+				text-shadow: 0px 2px 3px #392713;
+                color:#fff;
+                font-weight:bold;
+					&:hover {
+							
+							text-shadow: 0px 2px 3px #392713;
+                            color:#ed8736; }
+				}
+			}
+		}
+
+}

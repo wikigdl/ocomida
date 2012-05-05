@@ -1,0 +1,5 @@
+Welcome to restaurant cms
+ <%= link_to("my account", restaurant_admin_path(current_admin))%>
+<%= link_to("my restaurant", :controller => "restaurant/restaurants", :action => "index") %>
+<%= link_to("my dishes",restaurant_dishes_path)%>
+<%= link_to("my map",:controller => "restaurant/locations", :action => "index")%>

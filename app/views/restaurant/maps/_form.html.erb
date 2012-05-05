@@ -1,0 +1,24 @@
+<%= form_for(@restaurant_map) do |f| %>
+  <% if @restaurant_map.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@restaurant_map.errors.count, "error") %> prohibited this restaurant_map from being saved:</h2>
+
+      <ul>
+      <% @restaurant_map.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+      <%= f.label :address %><br />
+      <%= f.text_field :address %>
+    </div>
+    <%= f.hidden_field :restaurant_admin_id, :value => current_admin.id %>
+    <%= f.hidden_field :gmaps, :value => true %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+<% end %>

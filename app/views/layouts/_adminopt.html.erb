@@ -1,0 +1,12 @@
+<div>
+<%= link_to("my account", restaurant_admin_path(current_admin))%>
+</div>
+<div>
+<%= link_to("my restaurant", :controller => "restaurant/restaurants", :action => "index") %>
+</div>
+<div>
+<%= link_to("my dishes",restaurant_dishes_path)%>
+</div>
+<div>
+<%= link_to("my map",:controller => "restaurant/locations", :action => "index")%>
+</div>

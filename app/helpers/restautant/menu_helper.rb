@@ -1,0 +1,2 @@
+module Restautant::MenuHelper
+end

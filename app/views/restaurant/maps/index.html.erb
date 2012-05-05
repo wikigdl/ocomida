@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <th>address</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @restaurant_locations.each do |restaurant_map| %>
+      <% if restaurant_map.restaurant_admin_id == current_admin.id %>
+          <tr>
+            <td><%= restaurant_map.address %></td>
+            <td><%= link_to 'Show', restaurant_map %></td>
+            <td><%= link_to 'Edit', edit_restaurant_map_path(restaurant_map) %></td>
+            <td><%= link_to 'Destroy', restaurant_map, confirm: 'Are you sure?', method: :delete %></td>
+          </tr>
+          <%@has_one = 1 %>
+      <% end %>
+  <% end %>
+</table>
+
+<br />
+<% if @has_one.nil? %>
+    <%= link_to 'New Address', new_restaurant_location_path %>
+<%end%>
+
+<%= link_to 'New Map', new_restaurant_map_path %>

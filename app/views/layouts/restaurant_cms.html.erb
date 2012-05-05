@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Odc</title>
+  <link href='http://fonts.googleapis.com/css?family=Salsa' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag 'gmaps4rails' %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render  'layouts/header'  %>
+<div id="wrapper">
+  <div id="contenido">
+    <div id="columnamain">
+      <%= yield %>
+    </div>
+
+    <div id="columnaright">
+      <%= render  'layouts/adminopt'  %>
+    </div>
+  </div>
+  <%= render  'layouts/footer'  %>
+</div>
+
+</body>
+<%= yield :scripts %>
+</html>

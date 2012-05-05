@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @restaurant_admin.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @restaurant_admin.last_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_restaurant_admin_path(@restaurant_admin) %> |
+<%= link_to 'Back', restaurant_admins_path %>

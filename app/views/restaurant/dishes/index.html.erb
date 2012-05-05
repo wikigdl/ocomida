@@ -1,0 +1,29 @@
+<h1>Listing restaurant_dishes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @restaurant_dishes.each do |restaurant_dish| %>
+      <% if restaurant_dish.restaurant_admin_id == current_admin.id %>
+  <tr>
+    <td><%= restaurant_dish.name %></td>
+    <td><%= restaurant_dish.description %></td>
+    <td><%= restaurant_dish.price %></td>
+    <td><%= link_to 'Show', restaurant_dish %></td>
+    <td><%= link_to 'Edit', edit_restaurant_dish_path(restaurant_dish) %></td>
+    <td><%= link_to 'Destroy', restaurant_dish, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dish', new_restaurant_dish_path %>

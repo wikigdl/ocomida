@@ -1,0 +1,13 @@
+<div id="barra"></div>
+<div id="header">
+	<%= image_tag("bg-logo.png") %>
+	<div id="menu">
+    	<ul>
+     		<li><%= link_to 'index' %> </li>
+          <li><%= link_to 'restaurants', :controller => 'restaurant/cms',:action => 'index' %> </li>
+          <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %> </li>
+
+		</ul>
+  	</div>
+	
+</div>

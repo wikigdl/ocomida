@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @restaurant_dish.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @restaurant_dish.description %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @restaurant_dish.price %>
+</p>
+
+<%= form_for @restaurant_dish, :html => {:multipart => true} do |f| %>
+    <p>
+      <b>Photo: </b>
+      <%= image_tag(@restaurant_dish.image_url, :class => "dish")  %>
+     </p>
+<% end %>
+
+<%= link_to 'Edit', edit_restaurant_dish_path(@restaurant_dish) %> |
+<%= link_to 'Back', restaurant_dishes_path %>

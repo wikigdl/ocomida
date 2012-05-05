@@ -1,0 +1,2 @@
+module Restaurant::CmsHelper
+end
